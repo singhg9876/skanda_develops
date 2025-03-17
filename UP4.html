@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad - Mall & Multiplex Project</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+</head>
+
+<body>
+    <div id="logo" style="position: absolute;top: 10px;left: 10px;z-index: 10;">
+        <a href="index.html"><img src="./images/logo.png" alt="Logo" width="100px"></a>
+    </div>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" id="menuCheckbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <li>
+                    <a href="#">
+                        <label for="menuCheckbox" onclick="window.location.href = `index.html`;"><i class="fa fa-home"
+                                style="font-size: 20px;color: #4d98fa;"></i> Home</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <label for="menuCheckbox" onclick="window.location.href = `about.html`;"><i class="fa fa-book"
+                                style="font-size: 20px;color: #4d98fa;"></i> About Us</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        <label for="menuCheckbox" onclick="window.location.href = `ongoing projects.html`;"><i
+                                class="fa fa-building" style="font-size: 20px;color: #4d98fa;"></i> Ongoing
+                            Projects</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        <label for="menuCheckbox" onclick="window.location.href = `completed projects.html`;"><i
+                                class="fa fa-university" style="font-size: 20px;color: #4d98fa;"></i> Completed
+                            Projects</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        <label for="menuCheckbox" onclick="window.location.href = `upcoming projects.html`;"><i
+                                class="fa fa-calculator" style="font-size: 20px;color: #4d98fa;"></i> Upcoming
+                            Projects</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        <label for="menuCheckbox" onclick="window.location.href = `contact_us.html`;"><i
+                                class="fa fa-phone" style="font-size: 20px;color: #4d98fa;"></i> Contact Us</label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="ShowblankSpaceSm">
+        <br><br><br><br><br><br>
+    </div>
+    <div id="projDetailsWeb" style="position: relative;">
+        <img src="./images/upcoming projects/P4/1 (1).png" width="100%" height="450px" alt="">
+        <div class="text-center detailsWall">
+            <button onclick="toggleDetails('OverviewBtn')" id="OverviewBtn"
+                class="detailsWallBtnActive">Overview</button>
+            <button onclick="toggleDetails('AmentiesBtn')" id="AmentiesBtn" class="detailsWallBtn">Amenties</button>
+            <button onclick="toggleDetails('FloorBtn')" id="FloorBtn" class="detailsWallBtn">Floor Plan</button>
+            <button onclick="toggleDetails('SpecificationsBtn')" id="SpecificationsBtn"
+                class="detailsWallBtn">Specifications</button>
+            <button onclick="toggleDetails('GalleryBtn')" id="GalleryBtn" class="detailsWallBtn">Gallery</button>
+            <button onclick="toggleDetails('LocationBtn')" id="LocationBtn" class="detailsWallBtn">Location</button>
+        </div>
+    </div>
+    <div id="projDetailsMob">
+        <!-- <img src="./images/detailsWall.png" width="100%" alt=""> -->
+        <section style="background-image: url('./images/detailsWall.png');width: 100%;">
+            <div class="text-center">
+                <br><br><br>
+                <button onclick="toggleDetails('OverviewBtn')" id="OverviewBtn"
+                    class="detailsWallBtnActive">Overview</button>
+                <button onclick="toggleDetails('AmentiesBtn')" id="AmentiesBtn" class="detailsWallBtn">Amenties</button>
+                <button onclick="toggleDetails('FloorBtn')" id="FloorBtn" class="detailsWallBtn">Floor Plan</button>
+                <button onclick="toggleDetails('SpecificationsBtn')" id="SpecificationsBtn"
+                    class="detailsWallBtn">Specifications</button>
+                <button onclick="toggleDetails('GalleryBtn')" id="GalleryBtn" class="detailsWallBtn">Gallery</button>
+                <button onclick="toggleDetails('LocationBtn')" id="LocationBtn" class="detailsWallBtn">Location</button>
+                <br><br><br>
+            </div>
+        </section>
+    </div>
+    <script>
+        function toggleDetails(id) {
+            resetBtnClass();
+            if (id == "OverviewBtn") {
+                document.getElementById('OverviewBtn').className = "detailsWallBtnActive"
+                document.getElementById('overview').style.display = "block";
+            }
+            else if (id == "AmentiesBtn") {
+                document.getElementById('AmentiesBtn').className = "detailsWallBtnActive"
+                document.getElementById('amenties').style.display = "block";
+            }
+            else if (id == "FloorBtn") {
+                document.getElementById('FloorBtn').className = "detailsWallBtnActive"
+                document.getElementById('floorPlan').style.display = "block";
+            }
+            else if (id == "SpecificationsBtn") {
+                document.getElementById('SpecificationsBtn').className = "detailsWallBtnActive"
+                document.getElementById('Specifications').style.display = "block";
+            }
+            else if (id == "GalleryBtn") {
+                document.getElementById('GalleryBtn').className = "detailsWallBtnActive"
+                document.getElementById('gallery').style.display = "block";
+            }
+            else if (id == "LocationBtn") {
+                document.getElementById('LocationBtn').className = "detailsWallBtnActive"
+                document.getElementById('location').style.display = "block";
+            }
+        }
+
+        function resetBtnClass() {
+            document.getElementById('OverviewBtn').className = "detailsWallBtn"
+            document.getElementById('AmentiesBtn').className = "detailsWallBtn"
+            document.getElementById('FloorBtn').className = "detailsWallBtn"
+            document.getElementById('SpecificationsBtn').className = "detailsWallBtn"
+            document.getElementById('GalleryBtn').className = "detailsWallBtn"
+            document.getElementById('LocationBtn').className = "detailsWallBtn"
+            //hiding divs
+            document.getElementById('overview').style.display = "none";
+            document.getElementById('amenties').style.display = "none";
+            document.getElementById('floorPlan').style.display = "none";
+            document.getElementById('Specifications').style.display = "none";
+            document.getElementById('gallery').style.display = "none";
+            document.getElementById('location').style.display = "none";
+        }
+    </script>
+    <!-- Blur Layer -->
+    <div class="blur-layer"></div>
+
+    <br><br>
+    <!-- overview -->
+    <section id="overview" class="text-center">
+        <img src="./images/upcoming projects/P4/1 (1).png" width="90%" alt="">
+
+        <!-- <iframe class="overviewIframe" src="https://www.youtube.com/embed/1EQv8Ft0ec8?si=hSoc1LAh_lhbL6sd"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+    </section>
+
+    <!-- Amenities -->
+    <section id="amenties" style="display: none;" class="container">
+        <div class="row amentiesInner" style="font-size: 20px;">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <i class="fa fa-camera" style="color: #4d98fa;"></i>
+                Children's play area with sand area
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <i class="fa fa-microchip" style="color: #4d98fa;"></i>
+                Solar fencing
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <i class="fa fa-bath" style="color: #4d98fa;"></i>
+                Rainwater harvesting system
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <i class="fa fa-tint" style="color: #4d98fa;"></i>
+                Water softener system
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <i class="fa fa-camera" style="color: #4d98fa;"></i>
+                CCTC survelliance in parking areas
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <i class="fa fa-podcast" style="color: #4d98fa;"></i>
+                Individual water meter
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <i class="fa fa-mobile" style="color: #4d98fa;"></i>
+                Telecom and Internet
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <i class="fa fa-globe" style="color: #4d98fa;"></i>
+                Well-designed landscaping
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <i class="fa fa-bullseye" style="color: #4d98fa;"></i>
+                Generator DG set back-up for common areas, all tubes and fans in the flat
+            </div>
+        </div>
+    </section>
+    <!-- floor plan -->
+    <section id="floorPlan" style="display: none;">
+        <div class="row m-auto text-center">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="./images/upcoming projects/P4/1 (6).png" width="95%" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="./images/upcoming projects/P4/1 (7).png" width="95%" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="./images/upcoming projects/P4/1 (8).png" width="95%" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="./images/upcoming projects/P4/1 (10).png" width="95%" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- specs -->
+    <section id="Specifications" style="display: none;text-align: center;">
+        <img src="./images/upcoming projects/P4/1 (9).png" style="margin-left: 2.5%;" alt="">
+    </section>
+    <!-- gallery -->
+    <section id="gallery" class="container" style="display: none;">
+        <div class="row m-auto">
+            <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
+                <img class="clickable-image" src="./images/upcoming projects/P4/1 (1).png" width="100%" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
+                <img class="clickable-image" src="./images/upcoming projects/P4/1 (2).png" width="100%" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
+                <img class="clickable-image" src="./images/upcoming projects/P4/1 (3).png" width="100%" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
+                <img class="clickable-image" src="./images/upcoming projects/P4/1 (4).png" width="100%" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
+                <img class="clickable-image" src="./images/upcoming projects/P4/1 (5).png" width="100%" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- location -->
+    <section id="location" style="width: 95%;margin: auto;display: none;">
+        <div class="row">
+            <div class="col-lg-2">
+                <h4>Location:</h4>
+                <p>Hyderabad</p>
+            </div>
+            <div class="col-lg-10 text-center">
+                <iframe style="width: 90%;margin: auto;min-height: 500px;"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d487295.2258806325!2d78.07837012296297!3d17.4120778820789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1742039484928!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Pop-up Container -->
+    <div id="popup" class="popup hidden2">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <img id="popup-image" src="" alt="Popup Image">
+        </div>
+    </div>
+
+    <br><br>
+    <!-- footer web view -->
+    <footer>
+        <hr>
+        <div style="width: 90%;margin: auto;">
+            <div class="row m-auto footerSm">
+                <div class="col-lg-3 col-sm-12">
+                    <img src="./images/logo.png" width="80px" alt="logo"> <br><br>
+                    <span style="font-weight: 700;">Subcribe</span> <br> <br>
+                    <div class="row">
+                        <div class="col-sm-7 col-lg-7 col-md-7 subsEmail">
+                            <input type="text" style="border: none;width: 100%;" placeholder="Your e-mail">
+                        </div>
+                        <div class="col-sm-4 col-lg-4 col-md-4 subsSend">
+                            <button style="float: right;" class="btn sendBtn">Send &#8594;</button>
+                        </div>
+                    </div>
+                    <div style="height: 1px;background-color: #1F4B43;margin: 10px 0px;"></div>
+                    <br>
+                    <span>Reach out to us!</span>
+                </div>
+                <div class="col-lg-2 col-sm-12">
+                    <p class="footerHeading">Quick Links</p>
+                    <div>
+                        <a class="footerATag"
+                            style="margin-bottom:7px;text-decoration: none;color: #1F4B43;display: block;"
+                            href="about.html">About</a>
+                        <a class="footerATag"
+                            style="margin-bottom:7px;text-decoration: none;color: #1F4B43;display: block;"
+                            href="contact_us.html">Contact</a>
+                        <a class="footerATag"
+                            style="margin-bottom:7px;text-decoration: none;color: #1F4B43;display: block;"
+                            href="ongoing projects.html">Ongoing Projects</a>
+                        <a class="footerATag"
+                            style="margin-bottom:7px;text-decoration: none;color: #1F4B43;display: block;"
+                            href="completed projects.html">Completed Projects</a>
+                        <a class="footerATag"
+                            style="margin-bottom:7px;text-decoration: none;color: #1F4B43;display: block;"
+                            href="upcoming projects.html">Upcoming Projects</a>
+                        <a class="footerATag"
+                            style="margin-bottom:7px;text-decoration: none;color: #1F4B43;display: block;"
+                            href="#">Privacy Policy</a>
+                        <a class="footerATag"
+                            style="margin-bottom:7px;text-decoration: none;color: #1F4B43;display: block;"
+                            href="#">Terms
+                            & Conditions</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-12">
+                    <p class="footerHeading">Contact Us</p>
+                    <div>
+                        <a style="text-decoration: none;color: #1F4B43;"
+                            class="footerATag">info@skandadevelopers.org</a><br>
+                        <a style="text-decoration: none;color: #1F4B43;" class="footerATag">+91 9052 841
+                            841</a><br>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <p class="footerHeading">Our Office</p>
+                    <a class="footerATag" style="text-decoration: none;color: #1F4B43;">2nd floor, #110 Lotus,
+                        B N R Hills, Road
+                        No-51, Jublee Hills, Hyderabad – 33</a><br>
+                    <br>
+                    <a class="footerATag" style="text-decoration: none;color: #1F4B43;">Sun - Sat: 9:00 -
+                        22:00</a>
+                </div>
+                <div class="col-lg-2 col-sm-12">
+                    <p class="footerHeading">Follow Us</p>
+                    <div>
+                        <img src="./images/fb.png" alt="fb" style="height: 15px;padding-right: 15px;">
+                        <img src="./images/twitter.png" alt="twitter" style="height: 15px;padding-right: 15px;">
+                        <img src="./images/insta.png" alt="insta" style="height: 15px;padding-right: 15px;">
+                        <img src="./images/linkedin.png" alt="linkedin" style="height: 15px;padding-right: 15px;">
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </footer>
+    <div class="text-center" style="color: #1F4B43;margin-top: 20px;">
+        <p style="font-size: 14px;">Copyright © 2025. Skanda Developers</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".clickable-image");
+            const popup = document.getElementById("popup");
+            const popupImage = document.getElementById("popup-image");
+            const closePopup = document.getElementById("close-popup");
+            images.forEach(image => {
+                image.addEventListener("click", function () {
+                    const imgSrc = this.src;
+                    popupImage.src = imgSrc;
+                    popup.classList.remove("hidden2");
+                });
+            });
+            closePopup.addEventListener("click", function () {
+                popup.classList.add("hidden2");
+            });
+            popup.addEventListener("click", function (e) {
+                if (e.target === popup) {
+                    popup.classList.add("hidden2");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
