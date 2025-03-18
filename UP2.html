@@ -88,63 +88,20 @@
         <section style="background-image: url('./images/upcoming projects/P2/1 (2).png');width: 100%;">
             <div class="text-center">
                 <br><br><br>
-                <button onclick="toggleDetails('OverviewBtn')" id="OverviewBtn"
+                <button onclick="toggleDetails('OverviewBtn2')" id="OverviewBtn2"
                     class="detailsWallBtnActive">Overview</button>
-                <button onclick="toggleDetails('AmentiesBtn')" id="AmentiesBtn" class="detailsWallBtn">Amenties</button>
-                <button onclick="toggleDetails('FloorBtn')" id="FloorBtn" class="detailsWallBtn">Floor Plan</button>
-                <button onclick="toggleDetails('SpecificationsBtn')" id="SpecificationsBtn"
+                <button onclick="toggleDetails('AmentiesBtn2')" id="AmentiesBtn2"
+                    class="detailsWallBtn">Amenties</button>
+                <button onclick="toggleDetails('FloorBtn2')" id="FloorBtn2" class="detailsWallBtn">Floor Plan</button>
+                <button onclick="toggleDetails('SpecificationsBtn2')" id="SpecificationsBtn2"
                     class="detailsWallBtn">Specifications</button>
-                <button onclick="toggleDetails('GalleryBtn')" id="GalleryBtn" class="detailsWallBtn">Gallery</button>
-                <button onclick="toggleDetails('LocationBtn')" id="LocationBtn" class="detailsWallBtn">Location</button>
+                <button onclick="toggleDetails('GalleryBtn2')" id="GalleryBtn2" class="detailsWallBtn">Gallery</button>
+                <button onclick="toggleDetails('LocationBtn2')" id="LocationBtn2"
+                    class="detailsWallBtn">Location</button>
                 <br><br><br>
             </div>
         </section>
     </div>
-    <script>
-        function toggleDetails(id) {
-            resetBtnClass();
-            if (id == "OverviewBtn") {
-                document.getElementById('OverviewBtn').className = "detailsWallBtnActive"
-                document.getElementById('overview').style.display = "block";
-            }
-            else if (id == "AmentiesBtn") {
-                document.getElementById('AmentiesBtn').className = "detailsWallBtnActive"
-                document.getElementById('amenties').style.display = "block";
-            }
-            else if (id == "FloorBtn") {
-                document.getElementById('FloorBtn').className = "detailsWallBtnActive"
-                document.getElementById('floorPlan').style.display = "block";
-            }
-            else if (id == "SpecificationsBtn") {
-                document.getElementById('SpecificationsBtn').className = "detailsWallBtnActive"
-                document.getElementById('Specifications').style.display = "block";
-            }
-            else if (id == "GalleryBtn") {
-                document.getElementById('GalleryBtn').className = "detailsWallBtnActive"
-                document.getElementById('gallery').style.display = "block";
-            }
-            else if (id == "LocationBtn") {
-                document.getElementById('LocationBtn').className = "detailsWallBtnActive"
-                document.getElementById('location').style.display = "block";
-            }
-        }
-
-        function resetBtnClass() {
-            document.getElementById('OverviewBtn').className = "detailsWallBtn"
-            document.getElementById('AmentiesBtn').className = "detailsWallBtn"
-            document.getElementById('FloorBtn').className = "detailsWallBtn"
-            document.getElementById('SpecificationsBtn').className = "detailsWallBtn"
-            document.getElementById('GalleryBtn').className = "detailsWallBtn"
-            document.getElementById('LocationBtn').className = "detailsWallBtn"
-            //hiding divs
-            document.getElementById('overview').style.display = "none";
-            document.getElementById('amenties').style.display = "none";
-            document.getElementById('floorPlan').style.display = "none";
-            document.getElementById('Specifications').style.display = "none";
-            document.getElementById('gallery').style.display = "none";
-            document.getElementById('location').style.display = "none";
-        }
-    </script>
     <!-- Blur Layer -->
     <div class="blur-layer"></div>
 
@@ -272,15 +229,20 @@
             <div class="row m-auto footerSm">
                 <div class="col-lg-3 col-sm-12">
                     <img src="./images/logo.png" width="80px" alt="logo"> <br><br>
-                    <span style="font-weight: 700;">Subcribe</span> <br> <br>
-                    <div class="row">
-                        <div class="col-sm-7 col-lg-7 col-md-7 subsEmail">
-                            <input type="text" style="border: none;width: 100%;" placeholder="Your e-mail">
+                    <span style="font-weight: 700;">Subscribe</span> <br> <br>
+                    <form class="gform" method="post" id="subsEmailForm"
+                        action="https://script.google.com/macros/s/AKfycbwRDQn0Vi6UHB2QA6WeV3KDIem7JInbXcfTS6i6IoZg7af2rX5I9T_QWIPk-5NxnK81/exec">
+                        <div class="row">
+                            <div class="col-sm-7 col-lg-7 col-md-7 subsEmail">
+                                <input type="text" id="email2" name="email2" style="border: none;width: 100%;"
+                                    placeholder="Your e-mail">
+                            </div>
+                            <div class="col-sm-4 col-lg-4 col-md-4 subsSend">
+                                <button style="float: right;" type="submit" id="sbscBtn" class="btn sendBtn">Send
+                                    &#8594;</button>
+                            </div>
                         </div>
-                        <div class="col-sm-4 col-lg-4 col-md-4 subsSend">
-                            <button style="float: right;" class="btn sendBtn">Send &#8594;</button>
-                        </div>
-                    </div>
+                    </form>
                     <div style="height: 1px;background-color: #1F4B43;margin: 10px 0px;"></div>
                     <br>
                     <span>Reach out to us!</span>
@@ -370,6 +332,7 @@
             });
         });
     </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

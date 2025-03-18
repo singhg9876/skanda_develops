@@ -26,32 +26,41 @@
             <ul id="menu">
                 <li>
                     <a href="#">
-                        <label for="menuCheckbox" onclick="window.location.href = `index.html`;"><i class="fa fa-home" style="font-size: 20px;color: #4d98fa;"></i> Home</label>
+                        <label for="menuCheckbox" onclick="window.location.href = `index.html`;"><i class="fa fa-home"
+                                style="font-size: 20px;color: #4d98fa;"></i> Home</label>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <label for="menuCheckbox" onclick="window.location.href = `about.html`;"><i class="fa fa-book" style="font-size: 20px;color: #4d98fa;"></i> About Us</label>
+                        <label for="menuCheckbox" onclick="window.location.href = `about.html`;"><i class="fa fa-book"
+                                style="font-size: 20px;color: #4d98fa;"></i> About Us</label>
                     </a>
                 </li>
                 <li>
                     <a href="#about">
-                        <label for="menuCheckbox" onclick="window.location.href = `ongoing projects.html`;"><i class="fa fa-building" style="font-size: 20px;color: #4d98fa;"></i> Ongoing Projects</label>
+                        <label for="menuCheckbox" onclick="window.location.href = `ongoing projects.html`;"><i
+                                class="fa fa-building" style="font-size: 20px;color: #4d98fa;"></i> Ongoing
+                            Projects</label>
                     </a>
                 </li>
                 <li>
                     <a href="#about">
-                        <label for="menuCheckbox" onclick="window.location.href = `completed projects.html`;"><i class="fa fa-university" style="font-size: 20px;color: #4d98fa;"></i> Completed Projects</label>
+                        <label for="menuCheckbox" onclick="window.location.href = `completed projects.html`;"><i
+                                class="fa fa-university" style="font-size: 20px;color: #4d98fa;"></i> Completed
+                            Projects</label>
                     </a>
                 </li>
                 <li>
                     <a href="#about">
-                        <label for="menuCheckbox" onclick="window.location.href = `upcoming projects.html`;"><i class="fa fa-calculator" style="font-size: 20px;color: #4d98fa;"></i> Upcoming Projects</label>
+                        <label for="menuCheckbox" onclick="window.location.href = `upcoming projects.html`;"><i
+                                class="fa fa-calculator" style="font-size: 20px;color: #4d98fa;"></i> Upcoming
+                            Projects</label>
                     </a>
                 </li>
                 <li>
                     <a href="#about">
-                        <label for="menuCheckbox" onclick="window.location.href = `contact_us.html`;"><i class="fa fa-phone" style="font-size: 20px;color: #4d98fa;"></i> Contact Us</label>
+                        <label for="menuCheckbox" onclick="window.location.href = `contact_us.html`;"><i
+                                class="fa fa-phone" style="font-size: 20px;color: #4d98fa;"></i> Contact Us</label>
                     </a>
                 </li>
             </ul>
@@ -79,63 +88,20 @@
         <section style="background-image: url('./images/upcoming projects/P1/1 (8).png');width: 100%;">
             <div class="text-center">
                 <br><br><br>
-                <button onclick="toggleDetails('OverviewBtn')" id="OverviewBtn"
+                <button onclick="toggleDetails('OverviewBtn2')" id="OverviewBtn2"
                     class="detailsWallBtnActive">Overview</button>
-                <button onclick="toggleDetails('AmentiesBtn')" id="AmentiesBtn" class="detailsWallBtn">Amenties</button>
-                <button onclick="toggleDetails('FloorBtn')" id="FloorBtn" class="detailsWallBtn">Floor Plan</button>
-                <button onclick="toggleDetails('SpecificationsBtn')" id="SpecificationsBtn"
+                <button onclick="toggleDetails('AmentiesBtn2')" id="AmentiesBtn2"
+                    class="detailsWallBtn">Amenties</button>
+                <button onclick="toggleDetails('FloorBtn2')" id="FloorBtn2" class="detailsWallBtn">Floor Plan</button>
+                <button onclick="toggleDetails('SpecificationsBtn2')" id="SpecificationsBtn2"
                     class="detailsWallBtn">Specifications</button>
-                <button onclick="toggleDetails('GalleryBtn')" id="GalleryBtn" class="detailsWallBtn">Gallery</button>
-                <button onclick="toggleDetails('LocationBtn')" id="LocationBtn" class="detailsWallBtn">Location</button>
+                <button onclick="toggleDetails('GalleryBtn2')" id="GalleryBtn2" class="detailsWallBtn">Gallery</button>
+                <button onclick="toggleDetails('LocationBtn2')" id="LocationBtn2"
+                    class="detailsWallBtn">Location</button>
                 <br><br><br>
             </div>
         </section>
     </div>
-    <script>
-        function toggleDetails(id) {
-            resetBtnClass();
-            if (id == "OverviewBtn") {
-                document.getElementById('OverviewBtn').className = "detailsWallBtnActive"
-                document.getElementById('overview').style.display = "block";
-            }
-            else if (id == "AmentiesBtn") {
-                document.getElementById('AmentiesBtn').className = "detailsWallBtnActive"
-                document.getElementById('amenties').style.display = "block";
-            }
-            else if (id == "FloorBtn") {
-                document.getElementById('FloorBtn').className = "detailsWallBtnActive"
-                document.getElementById('floorPlan').style.display = "block";
-            }
-            else if (id == "SpecificationsBtn") {
-                document.getElementById('SpecificationsBtn').className = "detailsWallBtnActive"
-                document.getElementById('Specifications').style.display = "block";
-            }
-            else if (id == "GalleryBtn") {
-                document.getElementById('GalleryBtn').className = "detailsWallBtnActive"
-                document.getElementById('gallery').style.display = "block";
-            }
-            else if (id == "LocationBtn") {
-                document.getElementById('LocationBtn').className = "detailsWallBtnActive"
-                document.getElementById('location').style.display = "block";
-            }
-        }
-
-        function resetBtnClass() {
-            document.getElementById('OverviewBtn').className = "detailsWallBtn"
-            document.getElementById('AmentiesBtn').className = "detailsWallBtn"
-            document.getElementById('FloorBtn').className = "detailsWallBtn"
-            document.getElementById('SpecificationsBtn').className = "detailsWallBtn"
-            document.getElementById('GalleryBtn').className = "detailsWallBtn"
-            document.getElementById('LocationBtn').className = "detailsWallBtn"
-            //hiding divs
-            document.getElementById('overview').style.display = "none";
-            document.getElementById('amenties').style.display = "none";
-            document.getElementById('floorPlan').style.display = "none";
-            document.getElementById('Specifications').style.display = "none";
-            document.getElementById('gallery').style.display = "none";
-            document.getElementById('location').style.display = "none";
-        }
-    </script>
     <!-- Blur Layer -->
     <div class="blur-layer"></div>
 
@@ -199,7 +165,7 @@
 
         </div>
     </section>
-<!-- floor plan -->
+    <!-- floor plan -->
     <section id="floorPlan" style="display: none;">
         <div class="row m-auto text-center">
             <div class="col-lg-6 col-md-6 col-sm-12" style="margin-bottom: 20px;">
@@ -231,32 +197,25 @@
     <section id="gallery" class="container" style="display: none;">
         <div class="row m-auto">
             <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
-                <img class="clickable-image" src="./images/upcoming projects/P1/1 (3).png" width="100%"
-                    alt="">
+                <img class="clickable-image" src="./images/upcoming projects/P1/1 (3).png" width="100%" alt="">
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
-                <img class="clickable-image" src="./images/upcoming projects/P1/1 (4).png" width="100%"
-                    alt="">
+                <img class="clickable-image" src="./images/upcoming projects/P1/1 (4).png" width="100%" alt="">
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
-                <img class="clickable-image" src="./images/upcoming projects/P1/1 (5).png" width="100%"
-                    alt="">
+                <img class="clickable-image" src="./images/upcoming projects/P1/1 (5).png" width="100%" alt="">
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
-                <img class="clickable-image" src="./images/upcoming projects/P1/1 (6).png" width="100%"
-                    alt="">
+                <img class="clickable-image" src="./images/upcoming projects/P1/1 (6).png" width="100%" alt="">
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
-                <img class="clickable-image" src="./images/upcoming projects/P1/1 (7).png" width="100%"
-                    alt="">
+                <img class="clickable-image" src="./images/upcoming projects/P1/1 (7).png" width="100%" alt="">
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
-                <img class="clickable-image" src="./images/upcoming projects/P1/1 (8).png" width="100%"
-                    alt="">
+                <img class="clickable-image" src="./images/upcoming projects/P1/1 (8).png" width="100%" alt="">
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 1%;margin-bottom: 20px;">
-                <img class="clickable-image" src="./images/upcoming projects/P1/1 (9).png" width="100%"
-                    alt="">
+                <img class="clickable-image" src="./images/upcoming projects/P1/1 (9).png" width="100%" alt="">
             </div>
         </div>
     </section>
@@ -270,8 +229,8 @@
             </div>
             <div class="col-lg-10 text-center">
                 <iframe style="width: 90%;margin: auto;min-height: 500px;"
-                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d12065.084900362948!2d77.43577334999999!3d23.2670107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1741857933266!5m2!1sen!2sin"
-                    style="border:0;" allowfullscreen="" loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4547318496816!2d78.3750410736376!3d17.437936240805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e3c02c130b%3A0xab77ceaf250ded07!2sC9QH%2B6X3%20plot%20no.%2011%2C%20Software%20Units%20Layout%2C%20Infocity%2C%20Madhapur%2C%20Hyderabad%2C%20Telangana%20500081!5e0!3m2!1sen!2sin!4v1742299192264!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -292,15 +251,20 @@
             <div class="row m-auto footerSm">
                 <div class="col-lg-3 col-sm-12">
                     <img src="./images/logo.png" width="80px" alt="logo"> <br><br>
-                    <span style="font-weight: 700;">Subcribe</span> <br> <br>
-                    <div class="row">
-                        <div class="col-sm-7 col-lg-7 col-md-7 subsEmail">
-                            <input type="text" style="border: none;width: 100%;" placeholder="Your e-mail">
+                    <span style="font-weight: 700;">Subscribe</span> <br> <br>
+                    <form class="gform" method="post" id="subsEmailForm"
+                        action="https://script.google.com/macros/s/AKfycbwRDQn0Vi6UHB2QA6WeV3KDIem7JInbXcfTS6i6IoZg7af2rX5I9T_QWIPk-5NxnK81/exec">
+                        <div class="row">
+                            <div class="col-sm-7 col-lg-7 col-md-7 subsEmail">
+                                <input type="text" id="email2" name="email2" style="border: none;width: 100%;"
+                                    placeholder="Your e-mail">
+                            </div>
+                            <div class="col-sm-4 col-lg-4 col-md-4 subsSend">
+                                <button style="float: right;" type="submit" id="sbscBtn" class="btn sendBtn">Send
+                                    &#8594;</button>
+                            </div>
                         </div>
-                        <div class="col-sm-4 col-lg-4 col-md-4 subsSend">
-                            <button style="float: right;" class="btn sendBtn">Send &#8594;</button>
-                        </div>
-                    </div>
+                    </form>
                     <div style="height: 1px;background-color: #1F4B43;margin: 10px 0px;"></div>
                     <br>
                     <span>Reach out to us!</span>
@@ -335,8 +299,8 @@
                 <div class="col-lg-2 col-sm-12">
                     <p class="footerHeading">Contact Us</p>
                     <div>
-                        <a style="text-decoration: none;color: #1F4B43;" class="footerATag"
-                            >info@skandadevelopers.org</a><br>
+                        <a style="text-decoration: none;color: #1F4B43;"
+                            class="footerATag">info@skandadevelopers.org</a><br>
                         <a style="text-decoration: none;color: #1F4B43;" class="footerATag">+91 9052 841
                             841</a><br>
                     </div>
@@ -390,6 +354,7 @@
             });
         });
     </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

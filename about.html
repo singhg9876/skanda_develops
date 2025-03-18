@@ -77,9 +77,12 @@
         </div>
         <br><br>
         <div id="innerDivAbout">
-            <h4 style="font-size: 42px;font-weight: 300;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">One of the most trusted real estate
+            <h4
+                style="font-size: 42px;font-weight: 300;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                One of the most trusted real estate
                 developers</h4> <br>
-            <p style="font-size: 25px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Skanda is one of the emerging real estate property developers. We have
+            <p style="font-size: 25px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                Skanda is one of the emerging real estate property developers. We have
                 successfully positioned ourselves
                 in Hyderabad, Bengaluru and Mumbai. At Skanda, we believe in transforming dreams into reality by
                 crafting high-quality, sustainable, and modern living spaces <br><br>
@@ -131,7 +134,8 @@
         </div>
         <br><br>
         <div class="text-center">
-            <button onclick="window.location.href = `ongoing projects.html`;" style="padding: 5px 35px;" class="btn sendBtn">Check our
+            <button onclick="window.location.href = `ongoing projects.html`;" style="padding: 5px 35px;"
+                class="btn sendBtn">Check our
                 projects &#8594; </button>
         </div>
     </section>
@@ -148,14 +152,19 @@
                 <div class="col-lg-3 col-sm-12">
                     <img src="./images/logo.png" width="80px" alt="logo"> <br><br>
                     <span style="font-weight: 700;">Subscribe</span> <br> <br>
-                    <div class="row">
-                        <div class="col-sm-7 col-lg-7 col-md-7 subsEmail">
-                            <input type="text" style="border: none;width: 100%;" placeholder="Your e-mail">
+                    <form class="gform" method="post" id="subsEmailForm"
+                        action="https://script.google.com/macros/s/AKfycbwRDQn0Vi6UHB2QA6WeV3KDIem7JInbXcfTS6i6IoZg7af2rX5I9T_QWIPk-5NxnK81/exec">
+                        <div class="row">
+                            <div class="col-sm-7 col-lg-7 col-md-7 subsEmail">
+                                <input type="text" id="email2" name="email2" style="border: none;width: 100%;"
+                                    placeholder="Your e-mail">
+                            </div>
+                            <div class="col-sm-4 col-lg-4 col-md-4 subsSend">
+                                <button style="float: right;" type="submit" id="sbscBtn" class="btn sendBtn">Send
+                                    &#8594;</button>
+                            </div>
                         </div>
-                        <div class="col-sm-4 col-lg-4 col-md-4 subsSend">
-                            <button style="float: right;" class="btn sendBtn">Send &#8594;</button>
-                        </div>
-                    </div>
+                    </form>
                     <div style="height: 1px;background-color: #1F4B43;margin: 10px 0px;"></div>
                     <br>
                     <span>Reach out to us!</span>
@@ -222,6 +231,7 @@
         <p style="font-size: 14px;">Copyright © 2025. Skanda Developers</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
