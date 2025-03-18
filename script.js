@@ -1,4 +1,4 @@
-const form = document.getElementById('contactForm');
+const form = document.getElementById('contactSbt');
 if (form) {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -7,6 +7,7 @@ if (form) {
         formData.append('name', document.getElementById('name').value);
         formData.append('email', document.getElementById('email').value);
         formData.append('message', document.getElementById('message').value);
+        formData.append('date', new Date())
         document.getElementById('sbtBtn').disabled = true
         fetch(form.action, {
             method: 'POST',
@@ -66,6 +67,7 @@ document.getElementById('subsEmailForm').addEventListener('submit', function (ev
     const form = event.target;
     const formData = new FormData(form); // Gather all form data
     formData.append('email', document.getElementById('email2').value);
+    formData.append('date', new Date())
     document.getElementById('sbscBtn').disabled = true
     fetch(form.action, {
         method: 'POST',
@@ -143,3 +145,30 @@ function toggleDetails(id) {
         document.getElementById('location').style.display = "block";
     }
 }
+
+// Create the anchor element
+const whatsappLink = document.createElement('a');
+whatsappLink.className = 'whatsapp-float';
+whatsappLink.href = 'https://wa.me/9340282848';
+whatsappLink.target = '_blank';
+whatsappLink.setAttribute('aria-label', 'Chat on WhatsApp');
+
+// Create the image element
+const whatsappImg = document.createElement('img');
+whatsappImg.src = './images/whatsapp.png';
+whatsappImg.alt = 'Chat on WhatsApp';
+
+// Append the image to the link
+whatsappLink.appendChild(whatsappImg);
+
+// Append the link to the body
+document.body.appendChild(whatsappLink);
+
+document.querySelectorAll('.footerATag').forEach(tag => {
+    if (
+        tag.textContent.includes('Privacy Policy') || 
+        tag.textContent.includes('Terms') && tag.textContent.includes('Conditions')
+    ) {
+        tag.remove();
+    }
+});
