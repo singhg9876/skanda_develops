@@ -149,7 +149,7 @@ function toggleDetails(id) {
 // Create the anchor element
 const whatsappLink = document.createElement('a');
 whatsappLink.className = 'whatsapp-float';
-whatsappLink.href = 'https://wa.me/9340282848';
+whatsappLink.href = 'https://wa.me/9052841841';
 whatsappLink.target = '_blank';
 whatsappLink.setAttribute('aria-label', 'Chat on WhatsApp');
 
